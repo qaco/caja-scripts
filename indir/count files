@@ -1,4 +1,0 @@
-#!/bin/bash
-num=$(ls | wc -l)
-zenity --info --text="$num" --title="count files"
-
