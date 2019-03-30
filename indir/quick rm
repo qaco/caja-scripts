@@ -1,0 +1,9 @@
+#!/bin/bash
+trashdir="~/.trash"
+param=$(zenity --entry --text="Saisir le motif à supprimer" --title="quick rm")
+if [[ ! -d "$trashdir" ]]
+   then
+       mkdir "$trashdir"
+fi
+mv --backup=numbered -f $param "$trashdir"
+
